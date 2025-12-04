@@ -845,6 +845,11 @@
       line-height: 70px !important;
     }
   }
+  .lg\:top-\[200px\] {
+    @media (width >= 64rem) {
+      top: 200px;
+    }
+  }
   .lg\:max-w-\[295px\] {
     @media (width >= 64rem) {
       max-width: 295px;
