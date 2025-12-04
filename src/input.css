@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --breakpoint-2xs: 320px;
+  --breakpoint-xxl: 1400px;
+  --breakpoint-2xl-pro: 1720px;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orange: #d82626;
+  --color-dark-blue: #003176;
+  --color-blue: #0055a4;
+  --color-gray: #8e8e8e;
+
+  --font-body: "Onest", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  ::after,
+  ::before,
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply m-0 p-0 text-base font-body;
+  }
+  h1,
+  .h1 {
+    @apply font-heading font-bold leading-[140px] tracking-[0.0005em] 2xs:text-5xl sm:text-[50px] md:text-[70px] lg:text-[80px] xl:text-[90px] 2xl:text-[100px] 2xl-pro:text-[110px];
+  }
+  h2,
+  .h2 {
+    @apply text-[44px] 2xs:text-[20px] md:text-[25px] lg:text-[44px] font-bold font-body leading-[58px];
+  }
+  h3,
+  .h3 {
+    @apply text-[35px] 2xs:text-[18px] md:text-[20px] lg:text-[35px] font-heading font-medium leading-11;
+  }
+  h4,
+  .h4 {
+    @apply text-[30px] 2xs:text-[18px] md:text-[20px] lg:-[30px] font-heading font-bold;
+  }
+  h5,
+  .h5 {
+    @apply text-[25px] 2xs:text-base sm:text-[18px] md:text-[22px] lg:text-[25px] font-heading font-bold leading-8;
+  }
+  h6,
+  .h6 {
+    @apply text-[20px] 2xs:text-base sm:text-[18px] md:text-[20px] font-heading font-semibold;
+  }
+  p {
+    @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal;
+  }
+  .small-text {
+    @apply text-[14px] font-body font-medium tracking-[1px] leading-[18px];
+  }
+}
+
+@layer components {
+  .custom-btn {
+    @apply bg-orange text-white p-4 rounded-[100px] capitalize;
+  }
+}
+
+@layer utilities {
+  .container-max-1680 {
+    @apply w-full justify-between items-center ;
+  }
+  .links {
+    @apply font-medium leading-[23px] h-fit text-[18px] capitalize;
+  }
+  .btn-a a {
+    @apply underline leading-6 decoration-[0.05em] font-semibold! font-poppins capitalize;
+  }
+  nav button svg {
+    @apply text-black cursor-pointer;
+  }
+}
+
+/* .custom-transition {
+  transition: all;
+  transition-duration: 500;
+  transition-timing-function: ease-in-out;
+} */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.main-gradiant {
+  background-image: linear-gradient(
+    90.04deg,
+    #d82626 0.04%,
+    #d82626 30.59%,
+    #0055a4 141.65%
+  );
+}
+.nav-shadow {
+  box-shadow: 0px 4px 18.6px 0px #0000001a;
+}
+.slider {
+  width: 100%;
+}
+.slide-track {
+  width: 100%;
+  animation: scroll 20s linear infinite;
+}
+.slide {
+  width: 100%;
+  transition: 0.5s;
+}
