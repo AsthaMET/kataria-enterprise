@@ -1,10 +1,13 @@
-// active nav
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if (window.scrollY >= 50) {
-    nav.classList.add("active_nav");
+// fixed header
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('nav');
+  const scrollPosition = window.scrollY;
+  const triggerPoint = 20;
+
+  if (scrollPosition > triggerPoint) {
+    header.classList.add('fixed-header');
   } else {
-    nav.classList.remove("active_nav");
+    header.classList.remove('fixed-header');
   }
 });
 
