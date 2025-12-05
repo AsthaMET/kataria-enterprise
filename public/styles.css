@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000000;
     --color-white: #ffffff;
@@ -194,15 +193,6 @@
   .top-\[43px\] {
     top: 43px;
   }
-  .top-\[50px\] {
-    top: 50px;
-  }
-  .top-\[163px\] {
-    top: 163px;
-  }
-  .top-\[px\] {
-    top: px;
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -233,9 +223,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-fit {
     height: fit-content;
   }
@@ -257,9 +244,6 @@
   .max-w-\[865px\] {
     max-width: 865px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .-translate-x-full {
     --tw-translate-x: -100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -271,12 +255,6 @@
   .rotate-y-180 {
     --tw-rotate-y: rotateY(180deg);
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -315,21 +293,11 @@
   .rounded-bl-\[10px\] {
     border-bottom-left-radius: 10px;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-blue {
     background-color: var(--color-blue);
   }
   .bg-dark-blue {
     background-color: var(--color-dark-blue);
-  }
-  .bg-gray {
-    background-color: var(--color-gray);
-  }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
@@ -419,9 +387,6 @@
   .capitalize {
     text-transform: capitalize;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .underline-offset-\[0\.13em\] {
     text-underline-offset: 0.13em;
   }
@@ -430,18 +395,6 @@
   }
   .underline-offset-\[0\.145em\] {
     text-underline-offset: 0.145em;
-  }
-  .opacity-35 {
-    opacity: 35%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
@@ -764,7 +717,6 @@
   .hero-img {
     position: absolute;
     bottom: calc(var(--spacing) * 0);
-    max-width: 544px;
     opacity: 15%;
     @media (width >= 320px) {
       max-width: 150px;
@@ -776,6 +728,9 @@
       max-width: 400px;
     }
     @media (width >= 80rem) {
+      max-width: 400px;
+    }
+    @media (width >= 96rem) {
       max-width: 544px;
     }
   }
@@ -873,11 +828,6 @@ nav .nav-shadow {
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -889,11 +839,6 @@ nav .nav-shadow {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -910,11 +855,9 @@ nav .nav-shadow {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }
