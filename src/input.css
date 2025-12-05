@@ -122,7 +122,7 @@
     #0055a4 141.65%
   );
 }
-nav .nav-shadow {
+.nav-shadow {
   box-shadow: 0px 4px 18.6px 0px #0000001a;
 }
 .announcement-bar div .slider {
