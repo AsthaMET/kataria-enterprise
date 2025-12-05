@@ -85,7 +85,7 @@
     @apply 2xs:max-w-[200px] sm:max-w-[210px] md:max-w-[230px] lg:max-w-[295px];
   }
   .hero-img {
-    @apply absolute bottom-0 opacity-15 2xs:max-w-[150px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[400px] 2xl:max-w-[544px];
+    @apply absolute bottom-0 opacity-15 2xs:max-w-[150px] md:max-w-[300px] lg:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[544px];
   }
   .nav-links a,
   .mobile-links a {

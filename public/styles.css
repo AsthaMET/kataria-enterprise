@@ -725,10 +725,10 @@
       max-width: 300px;
     }
     @media (width >= 64rem) {
-      max-width: 400px;
+      max-width: 300px;
     }
     @media (width >= 80rem) {
-      max-width: 400px;
+      max-width: 300px;
     }
     @media (width >= 96rem) {
       max-width: 544px;
