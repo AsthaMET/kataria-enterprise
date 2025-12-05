@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000000;
     --color-white: #ffffff;
     --spacing: 0.25rem;
@@ -189,8 +191,17 @@
   .relative {
     position: relative;
   }
+  .top-\[43px\] {
+    top: 43px;
+  }
+  .top-\[50px\] {
+    top: 50px;
+  }
   .top-\[163px\] {
     top: 163px;
+  }
+  .top-\[px\] {
+    top: px;
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
@@ -210,6 +221,9 @@
   .mt-\[23px\] {
     margin-top: 23px;
   }
+  .mt-\[120px\] {
+    margin-top: 120px;
+  }
   .block {
     display: block;
   }
@@ -224,6 +238,9 @@
   }
   .h-fit {
     height: fit-content;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -310,6 +327,12 @@
   }
   .bg-gray {
     background-color: var(--color-gray);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
+  }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
   }
   .bg-orange {
     background-color: var(--color-orange);
@@ -407,6 +430,9 @@
   }
   .underline-offset-\[0\.145em\] {
     text-underline-offset: 0.145em;
+  }
+  .opacity-35 {
+    opacity: 35%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
