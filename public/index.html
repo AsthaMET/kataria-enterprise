@@ -42,7 +42,7 @@
     <nav class="w-full nav-shadow rounded-b-[30px]">
       <div class="relative container-max-1680 flex py-[25.5px] 2xs:py-4 md:py-5 xl:py-[25.5px]">
         <a href="#"><img src="./assets/images/logo.png" alt="logo"></a>
-        <div class="nav-links flex gap-[37px] text-[18px] max-[1255px]:hidden items-center">
+        <div class="nav-links flex lg:gap-5 2xl:gap-[37px] text-[18px] max-[1092px]:hidden items-center">
           <a href="#" class="font-bold leading-[23px] h-fit tracking-[0.003em]">Home</a>
           <a href="#" class="links font-medium tracking-[0.006em]">About Us</a>
           <!--  -->
@@ -56,8 +56,7 @@
                   fill="black" />
               </svg>
             </div>
-            <div
-              class="absolute hidden group-hover:inline-block bg-white shadow-lg rounded-md w-36 transition-all duration-500 ease-in-out">
+            <div class="absolute hidden mt-1 group-hover:inline-block bg-white shadow-lg rounded-md w-36">
               <a href="#">Item 1</a>
               <a href="#">Item 2</a>
               <a href="#">Item 3</a>
@@ -76,7 +75,7 @@
                   fill="black" />
               </svg>
             </div>
-            <div class="absolute hidden group-hover:inline-block bg-white shadow-lg rounded-md w-36">
+            <div class="absolute hidden mt-1 group-hover:inline-block bg-white shadow-lg rounded-md w-36">
               <a href="#">Item 1</a>
               <a href="#">Item 2</a>
               <a href="#">Item 3</a>
@@ -85,7 +84,7 @@
 
           <a href="#" class="links font-medium tracking-[0.003em]">Contact</a>
         </div>
-        <div class="rounded-[10px] bg-blue w-fit flex h-fit max-[1255px]:hidden cursor-pointer">
+        <div class="rounded-[10px] bg-blue w-fit flex h-fit max-[1092px]:hidden cursor-pointer">
           <div
             class="bg-orange hover:bg-[#a31a1a] text-white py-3.5 px-[19.5px] font-poppins font-medium w-fit flex gap-[4.5px] items-center rounded-tl-[10px] rounded-bl-[10px] leading-6 h-fit transition-all duration-500 ease-in-out">
             <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +103,7 @@
               class="underline-offset-[0.13em]">Employee</a>
           </div>
         </div>
-        <button id="menuButton" class="min-[1255px]:hidden">
+        <button id="menuButton" class="min-[1092px]:hidden">
           <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path stroke="black" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
           </svg>
@@ -118,46 +117,51 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu"
-      class="absolute top-[43px] h-[-webkit-fill-available] mt-[94px] max-[768px]:mt-[82px] max-[320px]:mt-[79.45px] left-0 w-full -translate-x-full transition-transform duration-500 z-40 bg-gray-300">
-      <ul class="mobile-links flex flex-col gap-5 items-center text-[20px] py-10">
+      class="absolute top-[43px] mt-[90px] max-[768px]:mt-[79px] max-[320px]:mt-[79.45px] left-0 w-full 2xs:h-[108%] sm:h-screen sm:w-[60%] -translate-x-full transition-transform duration-500 z-40 bg-gray-300">
+      <ul class="mobile-links flex flex-col gap-5 text-[20px] py-10">
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li>
-          <div class="select-dropdown group relative inline-block z-50">
-            <div
-              class="rounded cursor-pointer flex items-center gap-[7px] font-medium tracking-[0.006em] hover:text-blue hover:font-bold leading-[23px] transition-all duration-500 ease-in-out">
+          <div class="relative">
+            <input type="checkbox" id="toggleList" class="hidden peer">
+            <label for="toggleList"
+              class="text-black hover:text-blue hover:font-semibold rounded cursor-pointer flex items-center gap-[7px]">
               Services
               <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
                   fill="black" />
               </svg>
-            </div>
-            <div class="absolute hidden group-active:inline-block bg-white shadow-lg rounded-md w-36">
-              <a href="#">Item 1</a>
-              <a href="#">Item 2</a>
-              <a href="#">Item 3</a>
-            </div>
+            </label>
+            <ul
+              class="relative z-50 cursor-pointer w-full top-full left-0 bg-white border border-gray-300 rounded shadow-md hidden peer-checked:block">
+              <li class="service-items"><a href="#">Item 1</a></li>
+              <li class="service-items"><a href="#">Item 2</a></li>
+              <li class="service-items"><a href="#">Item 3</a></li>
+            </ul>
           </div>
         </li>
         <li>
-          <div class="select-dropdown group relative inline-block z-40">
-            <div
-              class="rounded cursor-pointer flex items-center gap-[7px] font-medium tracking-[0.006em] hover:text-blue hover:font-bold leading-[23px] transition-all duration-500 ease-in-out">
+          <div class="relative">
+            <input type="checkbox" id="toggle" class="hidden peer">
+            <label for="toggle"
+              class="text-black hover:text-blue hover:font-semibold rounded cursor-pointer flex items-center gap-[7px]">
               Brands
               <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
                   fill="black" />
               </svg>
-            </div>
-            <div class="absolute hidden group-active:inline-block bg-white shadow-lg rounded-md w-36">
-              <a href="#">Item 1</a>
-              <a href="#">Item 2</a>
-              <a href="#">Item 3</a>
-            </div>
+            </label>
+            <ul
+              class="relative z-50 cursor-pointer w-full top-full left-0 bg-white border border-gray-300 rounded shadow-md hidden peer-checked:block">
+              <li class="service-items"><a href="#">Item 1</a></li>
+              <li class="service-items"><a href="#">Item 2</a></li>
+              <li class="service-items"><a href="#">Item 3</a></li>
+            </ul>
           </div>
         </li>
+
         <li><a href="#">Contact</a></li>
 
         <div class="w-full px-8">
@@ -187,7 +191,7 @@
   <div class="hero-section">
     <!--  -->
     <div
-      class="relative text-center px-5 justify-self-center w-full top-[113px] 2xs:top-6 xl:top-[113px] 2xs:h-full md:h-full 2xs:pb-56 min-[400px]:pb-49 md:pb-59 2xl:pb-69 min-[1800px]:pb-50!">
+      class="relative text-center px-5 justify-self-center w-full top-[113px] 2xs:top-6 xl:top-[113px] 2xs:h-full md:h-full 2xs:pb-52 min-[400px]:pb-49 md:pb-59 2xl:pb-69 min-[1800px]:pb-50!">
       <h3>Welcome To</h3>
       <h1
         class="bg-clip-text text-transparent main-gradiant 2xs:mt-0 xl:-mt-3 2xs:leading-[50px] sm:leading-[60px] md:leading-[70px] lg:leading-20 xl:leading-[95px] 2xl:leading-[140px]">
