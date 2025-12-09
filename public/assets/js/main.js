@@ -41,3 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll("a")
     .forEach((a) => (a.onclick = () => toggleMenu(false)));
 });
+
+// body overflow when menu is open
+const menuButton = document.getElementById('menuButton');
+const myMenu = document.getElementById('mobileMenu');
+menuButton.addEventListener('click', () => {
+  const isMenuOpen = mobileMenu.style.display === 'block';
+  if (isMenuOpen) {
+    mobileMenu.style.display = 'none';
+    document.body.style.overflow = '';
+  } else {
+    mobileMenu.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+});

@@ -101,7 +101,7 @@
     @apply mx-10 font-semibold;
   }
   .mobile-links .service-items{
-    @apply px-4 py-2 hover:bg-gray-100 mx-0!;
+    @apply px-4 py-2 text-gray hover:bg-gray-100 mx-0!;
   }
 }
 
@@ -136,6 +136,9 @@
 }
 .nav-shadow {
   box-shadow: 0px 4px 18.6px 0px #0000001a;
+}
+.menu-shedow{
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
 }
 .announcement-bar div .slider {
   width: 100%;
