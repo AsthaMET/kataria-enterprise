@@ -211,6 +211,9 @@
   .z-50 {
     z-index: 50;
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-\[23px\] {
     margin-top: 23px;
   }
@@ -228,6 +231,9 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .table {
+    display: table;
   }
   .h-\[-webkit-fill-available\] {
     height: -webkit-fill-available;
@@ -250,6 +256,9 @@
   .max-w-\[865px\] {
     max-width: 865px;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .-translate-x-full {
     --tw-translate-x: -100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -262,8 +271,14 @@
     --tw-rotate-y: rotateY(180deg);
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -313,6 +328,10 @@
   }
   .rounded-bl-\[10px\] {
     border-bottom-left-radius: 10px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-blue {
     background-color: var(--color-blue);
@@ -411,6 +430,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .underline-offset-\[0\.13em\] {
     text-underline-offset: 0.13em;
   }
@@ -423,6 +445,15 @@
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-all {
     transition-property: all;
@@ -442,11 +473,51 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .group-visited\:inline-block {
+    &:is(:where(.group):visited *) {
+      display: inline-block;
+    }
+  }
+  .group-target\:inline-block {
+    &:is(:where(.group):target *) {
+      display: inline-block;
+    }
+  }
+  .group-open\:inline-block {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      display: inline-block;
+    }
+  }
+  .group-checked\:inline-block {
+    &:is(:where(.group):checked *) {
+      display: inline-block;
+    }
+  }
+  .group-focus-within\:inline-block {
+    &:is(:where(.group):focus-within *) {
+      display: inline-block;
+    }
+  }
   .group-hover\:inline-block {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         display: inline-block;
       }
+    }
+  }
+  .group-focus\:inline-block {
+    &:is(:where(.group):focus *) {
+      display: inline-block;
+    }
+  }
+  .group-focus-visible\:inline-block {
+    &:is(:where(.group):focus-visible *) {
+      display: inline-block;
+    }
+  }
+  .group-active\:inline-block {
+    &:is(:where(.group):active *) {
+      display: inline-block;
     }
   }
   .hover\:bg-\[\#a31a1a\] {
@@ -1022,6 +1093,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -1099,6 +1175,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1118,6 +1199,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
@@ -1135,6 +1217,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }
