@@ -36,7 +36,7 @@
   }
   h2,
   .h2 {
-    @apply text-[44px] 2xs:text-[20px] md:text-[25px] lg:text-[44px] font-bold font-body leading-[58px];
+    @apply text-[44px] 2xs:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[35px] 2xl:text-[44px] font-bold font-heading leading-[55px] 2xs:leading-[35px] lg:leading-10 2xl:leading-[55px];
   }
   h3,
   .h3 {
@@ -52,19 +52,19 @@
   }
   h6,
   .h6 {
-    @apply text-[20px] 2xs:text-base sm:text-[18px] md:text-[20px] font-heading font-semibold;
+    @apply text-[20px] 2xs:text-base xl:text-[20px] font-heading font-semibold leading-[25px];
   }
   p {
-    @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal justify-self-center text-gray capitalize;
+    @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal text-gray capitalize;
   }
   .small-text {
-    @apply text-[14px] font-body font-medium tracking-[1px] leading-[18px];
+    @apply text-[14px] font-body font-medium tracking-[1px] leading-[18px] uppercase;
   }
 }
 
 @layer components {
   .custom-btn {
-    @apply bg-orange text-white p-4 rounded-[100px] capitalize;
+    @apply bg-orange text-white py-[15px] hover:bg-blue transition-all duration-500 ease-in-out px-[28.5px] font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
   }
 }
 
@@ -139,6 +139,10 @@
 }
 .menu-shedow{
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+.marquee-divider{
+  border: 1px solid #FFFFFF4D;
+  height: 29px;
 }
 .announcement-bar div .slider {
   width: 100%;

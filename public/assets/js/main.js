@@ -1,13 +1,13 @@
 // fixed header
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('nav');
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("nav");
   const scrollPosition = window.scrollY;
   const triggerPoint = 20;
 
   if (scrollPosition > triggerPoint) {
-    header.classList.add('fixed-header');
+    header.classList.add("fixed-header");
   } else {
-    header.classList.remove('fixed-header');
+    header.classList.remove("fixed-header");
   }
 });
 
@@ -43,24 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // body overflow when menu is open
-const menuButton = document.getElementById('menuButton');
-const myMenu = document.getElementById('mobileMenu');
-const menuItems = myMenu.querySelectorAll('a'); 
+const menuButton = document.getElementById("menuButton");
+const myMenu = document.getElementById("mobileMenu");
+const menuItems = myMenu.querySelectorAll("a");
 
-menuButton.addEventListener('click', () => {
-  const isMenuOpen = mobileMenu.style.display === 'block';
+menuButton.addEventListener("click", () => {
+  const isMenuOpen = mobileMenu.style.display === "block";
   if (isMenuOpen) {
-    mobileMenu.style.display = 'none';
-    document.body.style.overflow = '';
+    mobileMenu.style.display = "none";
+    document.body.style.overflow = "";
   } else {
-    mobileMenu.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    mobileMenu.style.display = "block";
+    document.body.style.overflow = "hidden";
   }
 });
 
-menuItems.forEach(item => {
-  item.addEventListener('click', () => {
-    mobileMenu.style.display = 'none';
-    document.body.style.overflow = '';
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    mobileMenu.style.display = "none";
+    document.body.style.overflow = "";
   });
 });
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const menu = document.getElementById("mobileMenu");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    menu.style.top = "0";
+  } else {
+    menu.style.top = "43px";
+  }
+}
