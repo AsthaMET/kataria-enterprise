@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // body overflow when menu is open
 const menuButton = document.getElementById('menuButton');
 const myMenu = document.getElementById('mobileMenu');
+// Select all menu items within the mobile menu
+const menuItems = myMenu.querySelectorAll('a'); 
+
 menuButton.addEventListener('click', () => {
   const isMenuOpen = mobileMenu.style.display === 'block';
   if (isMenuOpen) {
@@ -54,4 +57,11 @@ menuButton.addEventListener('click', () => {
     mobileMenu.style.display = 'block';
     document.body.style.overflow = 'hidden';
   }
+});
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    mobileMenu.style.display = 'none';
+    document.body.style.overflow = '';
+  });
 });
