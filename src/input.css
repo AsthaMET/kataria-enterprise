@@ -12,10 +12,12 @@
   --color-dark-blue: #003176;
   --color-blue: #0055a4;
   --color-gray: #8e8e8e;
+  --color-light-gray: #dfdfdf;
 
   --font-body: "Onest", sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 @layer base {
@@ -54,8 +56,9 @@
   .h6 {
     @apply text-[20px] 2xs:text-base xl:text-[20px] font-heading font-semibold leading-[25px];
   }
-  p {
-    @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal text-gray capitalize;
+  p,
+  .p {
+    @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal;
   }
   .small-text {
     @apply text-[14px] font-body font-medium tracking-[1px] leading-[18px] uppercase;
@@ -66,11 +69,14 @@
   .custom-btn {
     @apply bg-orange text-white py-[15px] hover:bg-blue transition-all duration-500 ease-in-out px-[28.5px] font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
   }
+  .white-custom-btn {
+    @apply bg-white text-orange py-[17px] hover:bg-blue transition-all duration-500 ease-in-out px-5 font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
+  }
 }
 
 @layer utilities {
   .container-max-1680 {
-    @apply px-[119.41px] 2xs:px-5 min-[1092px]:px-5 xxl:px-[119.41px] 2xl:px-[119.41px] justify-between items-center justify-self-center w-full ;
+    @apply px-[119.41px] 2xs:px-5 min-[1092px]:px-5 xxl:px-[119.41px] 2xl:px-[119.41px] justify-between items-center justify-self-center w-full;
   }
   .nav-links .links {
     @apply font-medium leading-[23px] h-fit text-[18px] capitalize;
@@ -91,17 +97,38 @@
   .mobile-links a {
     @apply hover:text-blue hover:font-bold transition-all duration-500 ease-in-out;
   }
-  .select-dropdown a{
+  .select-dropdown a {
     @apply block px-4 py-2 text-black hover:bg-gray-100 transition-all duration-500 ease-in-out;
   }
-  .mobile-links .btn-nav a{
+  .mobile-links .btn-nav a {
     @apply hover:text-orange transition-all duration-500 ease-in-out underline;
   }
-  #mobileMenu .mobile-links li{
+  #mobileMenu .mobile-links li {
     @apply mx-10 font-semibold;
   }
-  .mobile-links .service-items{
+  .mobile-links .service-items {
     @apply px-4 py-2 text-gray hover:bg-gray-100 mx-0!;
+  }
+  .about-us-main {
+    @apply 2xs:gap-5 md:gap-7 2xl:gap-[70px] 2xs:px-5 xl:px-14 2xl:px-[120px] pt-[100px] 2xs:pt-10 2xl-pro:pt-[100px] pb-[104px] 2xs:pb-10 2xl-pro:pb-[104px];
+  }
+  .about-us-feature {
+    @apply flex items-center 2xs:leading-5 2xl:leading-8;
+  }
+  .year-span {
+    @apply tracking-[0.05em] text-gray text-[36px] leading-[51px] 2xs:text-[18px] sm:text-[25px] xl:text-[36px];
+  }
+  .capability-main {
+    @apply flex gap-3 items-center mx-[71px];
+  }
+  .core-value-main {
+    @apply flex gap-2.5 items-center mt-2.5;
+  }
+  .core-value-dot {
+    @apply w-[9px] h-[9px] bg-blue rounded-full shrink-0;
+  }
+  .core-value-main span {
+    @apply text-gray font-roboto;
   }
 }
 
@@ -137,11 +164,25 @@
 .nav-shadow {
   box-shadow: 0px 4px 18.6px 0px #0000001a;
 }
-.menu-shedow{
+.menu-shedow {
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
 }
-.marquee-divider{
-  border: 1px solid #FFFFFF4D;
+.our-history-shedow {
+  box-shadow: 4.95px 4.95px 4.95px 0px #0000001a;
+}
+.our-commitment-gradiant {
+  background: linear-gradient(
+    180deg,
+    #d82626 0%,
+    #0055a4 52.4%,
+    rgba(0, 85, 164, 0) 100%
+  );
+}
+.our-commitment-shedow {
+  box-shadow: 0px 10px 30px 0px #00000008;
+}
+.marquee-divider {
+  border: 1px solid #ffffff4d;
   height: 29px;
 }
 .announcement-bar div .slider {
