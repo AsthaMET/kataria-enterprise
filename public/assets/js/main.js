@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// menu
+// Nevigation menu
 document.addEventListener("DOMContentLoaded", () => {
   const btn = menuButton;
   const menu = mobileMenu;
@@ -19,8 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const close = closeIcon;
 
   const toggleMenu = (isOpen) => {
-    menu.classList.toggle("-translate-x-full", !isOpen);
-    menu.classList.toggle("translate-x-0", isOpen);
+    if (isOpen) {
+      menu.classList.add("-translate-x-full");
+      requestAnimationFrame(() => {
+        menu.classList.remove("-translate-x-full");
+      });
+    } else {
+      menu.classList.add("-translate-x-full");
+    }
 
     open.classList.toggle("hidden", isOpen);
     close.classList.toggle("hidden", !isOpen);
@@ -28,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btn.onclick = (e) => {
     e.stopPropagation();
-    toggleMenu(menu.classList.contains("-translate-x-full"));
+    const isClosed = menu.classList.contains("-translate-x-full");
+    toggleMenu(isClosed);
   };
 
   document.onclick = (e) => {
@@ -37,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  menu
-    .querySelectorAll("a")
-    .forEach((a) => (a.onclick = () => toggleMenu(false)));
+  menu.querySelectorAll("a").forEach((a) => {
+    a.onclick = () => toggleMenu(false);
+  });
 });
 
 // body overflow when menu is open
@@ -77,3 +84,30 @@ function scrollFunction() {
     menu.style.top = "43px";
   }
 }
+
+// swiper-team-member
+document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".team-member", {
+    loop: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      },
+    },
+  });
+});

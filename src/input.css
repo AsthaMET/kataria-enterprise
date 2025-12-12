@@ -4,7 +4,6 @@
 @theme {
   --breakpoint-2xs: 320px;
   --breakpoint-xxl: 1400px;
-  --breakpoint-2xl-pro: 1720px;
 
   --color-white: #ffffff;
   --color-black: #000000;
@@ -13,11 +12,13 @@
   --color-blue: #0055a4;
   --color-gray: #8e8e8e;
   --color-light-gray: #dfdfdf;
+  --color-dark-gray: #434343;
 
   --font-body: "Onest", sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @layer base {
@@ -34,7 +35,7 @@
   }
   h1,
   .h1 {
-    @apply font-heading font-bold leading-[140px] tracking-[0.0005em] 2xs:text-5xl sm:text-[50px] md:text-[60px] xl:text-[90px] 2xl:text-[100px] 2xl-pro:text-[110px];
+    @apply font-heading font-bold leading-[140px] tracking-[0.0005em] 2xs:text-5xl sm:text-[50px] md:text-[60px] xl:text-[90px] 2xl:text-[110px];
   }
   h2,
   .h2 {
@@ -56,21 +57,23 @@
   .h6 {
     @apply text-[20px] 2xs:text-base xl:text-[20px] font-heading font-semibold leading-[25px];
   }
-  p,
-  .p {
+  p {
     @apply text-[18px] 2xs:text-base sm:text-[18px] leading-7 font-body font-normal;
   }
   .small-text {
     @apply text-[14px] font-body font-medium tracking-[1px] leading-[18px] uppercase;
   }
+  .small-text-inter {
+    @apply text-[14px] font-inter font-medium leading-[17px] capitalize text-white;
+  }
 }
 
 @layer components {
   .custom-btn {
-    @apply bg-orange text-white py-[15px] hover:bg-blue transition-all duration-500 ease-in-out px-[28.5px] font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
+    @apply bg-orange text-white py-[15px] 2xs:py-2.5 md:py-[15px] hover:bg-blue transition-all duration-500 ease-in-out px-[28.5px] 2xs:px-[18px] md:px-[28.5px] font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
   }
   .white-custom-btn {
-    @apply bg-white text-orange py-[17px] hover:bg-blue transition-all duration-500 ease-in-out px-5 font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
+    @apply bg-white text-orange py-[17px] 2xs:py-2.5 md:py-[17px] hover:bg-orange hover:text-white transition-all duration-500 ease-in-out px-5 2xs:px-[15px] md:px-5 font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
   }
 }
 
@@ -110,7 +113,7 @@
     @apply px-4 py-2 text-gray hover:bg-gray-100 mx-0!;
   }
   .about-us-main {
-    @apply 2xs:gap-5 md:gap-7 2xl:gap-[70px] 2xs:px-5 xl:px-14 2xl:px-[120px] pt-[100px] 2xs:pt-10 2xl-pro:pt-[100px] pb-[104px] 2xs:pb-10 2xl-pro:pb-[104px];
+    @apply 2xs:gap-5 md:gap-7 2xl:gap-[70px] 2xs:px-5 xl:px-14 2xl:px-[120px] pt-[100px] 2xs:pt-10 2xl:pt-[100px] pb-[104px] 2xs:pb-10 2xl:pb-[104px];
   }
   .about-us-feature {
     @apply flex items-center 2xs:leading-5 2xl:leading-8;
@@ -124,11 +127,37 @@
   .core-value-main {
     @apply flex gap-2.5 items-center mt-2.5;
   }
+  /* .core-value-dot {
+    @apply w-[9px] h-[9px] bg-blue rounded-full shrink-0;
+  } */
   .core-value-dot {
+    @apply relative pr-2.5;
+  }
+  .core-value-dot::before {
+    @apply content-[''] absolute left-0 top-1/2 transform -translate-y-1/2;
     @apply w-[9px] h-[9px] bg-blue rounded-full shrink-0;
   }
   .core-value-main span {
     @apply text-gray font-roboto;
+  }
+  .core-value-text {
+    @apply text-gray font-roboto;
+  }
+  .our-team-main {
+    @apply pl-[121px] pr-[117px] mt-[74px] 2xs:my-11 lg:my-12 xl:my-13 2xl:mt-[74px] 2xl:mb-[130px] 2xs:px-5 lg:px-5 xl:px-11 2xl:pl-[121px] 2xl:pr-[117px];
+  }
+  .team-container {
+    @apply relative bg-dark-gray rounded-[20px];
+  }
+  .our-team-main img {
+    @apply w-full h-full object-cover rounded-[30px];
+  }
+  .team-contant {
+    @apply absolute bottom-0 bg-blue w-full rounded-b-[20px] py-[15px] px-5;
+  }
+  .container1 :first-child,
+  .container2 :first-child {
+    @apply mt-0;
   }
 }
 
@@ -181,6 +210,14 @@
 .our-commitment-shedow {
   box-shadow: 0px 10px 30px 0px #00000008;
 }
+.our-team-gradiant {
+  background: linear-gradient(
+    180.63deg,
+    rgba(0, 0, 0, 0) 69.24%,
+    rgba(0, 0, 0, 0.2) 75.59%,
+    rgba(0, 0, 0, 0.2) 98.74%
+  );
+}
 .marquee-divider {
   border: 1px solid #ffffff4d;
   height: 29px;
@@ -205,4 +242,16 @@
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   animation: stickySlideDown 1s ease-in-out;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
 }
