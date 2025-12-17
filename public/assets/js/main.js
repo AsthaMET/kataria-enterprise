@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// our-brands
 document.addEventListener("DOMContentLoaded", () => {
   var swiper = new Swiper(".brands", {
     loop: true,
@@ -152,4 +153,41 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+});
+
+// our-history years
+const years = document.querySelectorAll(".year");
+const contents = document.querySelectorAll(".history-content");
+const dot = document.getElementById("timelineDot");
+const yearsWrapper = document.getElementById("timelineYears");
+function moveDotToYear(year) {
+  const dotParent = dot.offsetParent;
+  const yearRect = year.getBoundingClientRect();
+  const parentRect = dotParent.getBoundingClientRect();
+  const left =
+    yearRect.left - parentRect.left + yearRect.width / 2 - dot.offsetWidth / 2;
+  dot.style.left = `${left}px`;
+}
+function activateYear(year) {
+  const target = year.dataset.target;
+  years.forEach((y) => {
+    y.classList.remove("text-red-600");
+    y.classList.add("text-gray-500");
+  });
+  year.classList.add("text-red-600");
+  contents.forEach((c) => c.classList.add("hidden"));
+  document
+    .querySelector(`[data-content="${target}"]`)
+    .classList.remove("hidden");
+  moveDotToYear(year);
+}
+years.forEach((year) => {
+  year.addEventListener("click", () => activateYear(year));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  activateYear(years[0]);
+});
+window.addEventListener("resize", () => {
+  const activeYear = document.querySelector(".year.text-red-600");
+  if (activeYear) moveDotToYear(activeYear);
 });

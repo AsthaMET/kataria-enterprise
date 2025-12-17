@@ -66,8 +66,8 @@
   .small-text-inter {
     @apply text-[14px] font-inter font-medium leading-[17px] capitalize text-white;
   }
-  a{
-    @apply transition-all duration-500 ease-in-out; 
+  a {
+    @apply transition-all duration-500 ease-in-out;
   }
 }
 
@@ -115,88 +115,93 @@
   .mobile-links .service-items {
     @apply px-4 py-2 text-gray hover:bg-gray-100 mx-0!;
   }
-  .about-us-main {
+  .about-us .about-us-main {
     @apply 2xs:gap-5 md:gap-7 2xl:gap-[70px] 2xs:px-5 xl:px-14 2xl:px-[120px] pt-[100px] 2xs:pt-10 2xl:pt-[100px] pb-[104px] 2xs:pb-10 2xl:pb-[104px];
   }
-  .about-us-feature {
+  .about-us .about-us-feature {
     @apply flex items-center 2xs:leading-5 2xl:leading-8;
   }
-  .year-span {
-    @apply tracking-[0.05em] text-gray text-[36px] leading-[51px] 2xs:text-[18px] sm:text-[25px] xl:text-[36px];
+  .our-history .year-span {
+    @apply tracking-[0.05em] text-[36px] leading-[51px] 2xs:text-[18px] sm:text-[25px] xl:text-[36px];
   }
-  .capability-main {
+  .capabilities .capability-main {
     @apply flex gap-3 items-center mx-[71px];
   }
-  .core-value-main {
+  .our-commitment .core-value-main {
     @apply flex gap-2.5 items-center mt-2.5;
   }
-  .core-value-dot {
+  .our-commitment .core-value-dot {
     @apply relative pr-2.5;
   }
-  .core-value-dot::before {
+  .our-commitment .core-value-dot::before {
     @apply content-[''] absolute left-0 top-1/2 transform -translate-y-1/2;
     @apply w-[9px] h-[9px] bg-blue rounded-full shrink-0;
   }
-  .core-value-main span {
+  .our-commitment .core-value-main span {
     @apply text-gray font-roboto;
   }
-  .core-value-text {
+  .our-commitment .core-value-text {
     @apply text-gray font-roboto;
   }
-  .our-team-main {
+  .our-team .our-team-main {
     @apply pl-[121px] pr-[117px] mt-[74px] 2xs:my-11 lg:my-12 xl:my-13 2xl:mt-[74px] 2xl:mb-[130px] 2xs:px-5 lg:px-5 xl:px-11 2xl:pl-[121px] 2xl:pr-[117px];
   }
-  .team-container {
+  .our-team .team-container {
     @apply relative bg-dark-gray rounded-[20px];
   }
-  .our-team-main img {
+  .our-team .our-team-main img {
     @apply w-full h-full object-cover rounded-[30px];
   }
-  .team-contant {
+  .our-team .team-contant {
     @apply absolute bottom-0 bg-blue w-full rounded-b-[20px] py-[15px] px-5;
   }
   .container1 :first-child,
   .container2 :first-child {
     @apply mt-0;
   }
-  .testomonial-container {
+  .testomonial-section .testomonial-container {
     @apply bg-blue py-10 2xs:py-5 2xl:py-10 px-[51px] 2xs:px-5 2xl:px-[51px] rounded-[40px] flex flex-col justify-between h-full;
   }
-  .testomonial-icon {
+  .testomonial-section .testomonial-icon {
     @apply flex gap-1 py-1;
   }
-  .testomonial-container .text {
+  .testomonial-section .testomonial-container .text {
     @apply text-white font-inter mt-[33px];
   }
-  .author-name h6 {
+  .testomonial-section .author-name h6 {
     @apply leading-6 text-white;
   }
-  .author-name p {
+  .testomonial-section .author-name p {
     @apply leading-7 font-inter text-white;
   }
-  .footer .footer-links{
-    @apply font-body text-base text-[#F7F7EC] ;
+  footer .footer .footer-links {
+    @apply font-body text-base text-[#F7F7EC];
   }
-  .footer-links a{
+  footer .footer-links a {
     @apply hover:text-blue;
   }
-  .socialmedia-icon{
+  footer .socialmedia-icon {
     @apply p-[9px] w-fit;
   }
-  footer h6{
+  footer h6 {
     @apply text-[24px] font-bold leading-6 font-heading text-[#F7F7EC] tracking-[0.04em] w-max;
   }
-  footer .links{
+  footer .links {
     @apply text-[#F7F7EC] flex flex-col gap-5 2xs:gap-2 2xl:gap-5 mt-5 leading-[26px];
   }
-  .brands-container{
+  .our-brands .brands-container {
     @apply relative h-[560px] 2xs:h-[400px] 2xl:h-[560px] rounded-[10px] overflow-hidden cursor-pointer;
   }
-  .brands-hover-text{
+  .our-brands .brands-hover-text {
     @apply absolute bottom-0 flex items-end bg-[#D82626CC]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
   }
+  .our-history .history-text {
+    @apply p-[50px] 2xs:p-2 md:py-5 lg:p-7 xl:p-9 2xl:p-[50px] rounded-3xl bg-white 2xs:ml-0 lg:-ml-[85px] 2xl:-ml-[278px] 2xs:mt-0 lg:mt-5 xl:mt-10 2xl:mt-[50px] 2xs:mb-0 lg:mb-5 xl:mb-10 2xl:mb-[51px] h-fit self-center;
+  }
+  .our-history .history-text p {
+    @apply mt-[15px] text-black lg:max-w-[569px] text-base 2xs:leading-[22px] sm:leading-[26px];
+  }
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -254,7 +259,7 @@
     rgba(0, 0, 0, 0.2) 98.74%
   );
 }
-.marquee-divider {
+.capabilities .marquee-divider {
   border: 1px solid #ffffff4d;
   height: 29px;
 }
