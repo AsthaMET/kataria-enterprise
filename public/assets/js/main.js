@@ -71,16 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: "auto",
     spaceBetween: 20,
     breakpoints: {
-      640: {
+      320: {
         slidesPerView: 1.5,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 2.5,
+        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      1280: {
+        slidesPerView: 4,
         spaceBetween: 20,
       },
     },
@@ -97,10 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
       640: {
         slidesPerView: 2,
         spaceBetween: 10,
@@ -125,18 +125,53 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   var swiper = new Swiper(".brands", {
     loop: true,
+    spaceBetween: 20,
     autoplay: {
       delay: 2100,
       disableOnInteraction: false,
     },
-    spaceBetween: 30,
+    spaceBetween: 20,
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
         spaceBetween: 10,
       },
       640: {
-        slidesPerView: 2,
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+});
+
+//our-commitment
+document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".our-commitment-slider", {
+    loop: true,
+    // autoplay: {
+    //   delay: 2100,
+    //   disableOnInteraction: false,
+    // },
+    slidesPerView: "auto",
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 2.5,
         spaceBetween: 10,
       },
       768: {
@@ -145,11 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1240: {
-        slidesPerView: 4,
-        spaceBetween: 30,
       },
     },
   });

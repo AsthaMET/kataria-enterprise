@@ -14,6 +14,11 @@
   --color-light-gray: #dfdfdf;
   --color-dark-gray: #434343;
 
+  --shadow-our-history-shedow: 4.95px 4.95px 4.95px 0px #0000001a;
+  --shadow-nav-shadow: 0px 4px 18.6px 0px #0000001a;
+  --shadow-menu-shedow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  --shadow-our-commitment-shedow: 0px 10px 30px 0px #00000008;
+
   --font-body: "Onest", sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-poppins: "Poppins", sans-serif;
@@ -47,11 +52,11 @@
   }
   h4,
   .h4 {
-    @apply text-[30px] 2xs:text-[18px] md:text-[20px] 2xl:text-[30px] font-heading font-bold;
+    @apply text-[30px] 2xs:text-base md:text-[20px] 2xl:text-[30px] font-heading font-bold;
   }
   h5,
   .h5 {
-    @apply text-[25px] 2xs:text-base sm:text-[18px] md:text-[22px] lg:text-[25px] font-heading font-bold leading-8;
+    @apply text-[25px] 2xs:text-base sm:text-[18px] md:text-[22px] 2xl:text-[25px] font-heading font-bold leading-8;
   }
   h6,
   .h6 {
@@ -76,7 +81,7 @@
     @apply bg-orange text-white py-[15px] 2xs:py-2.5 md:py-[15px] hover:bg-blue transition-all duration-500 ease-in-out px-[28.5px] 2xs:px-[18px] md:px-[28.5px] font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
   }
   .white-custom-btn {
-    @apply bg-white text-orange py-[17px] 2xs:py-2.5 md:py-[17px] hover:bg-orange hover:text-white transition-all duration-500 ease-in-out px-5 2xs:px-[15px] md:px-5 font-bold font-heading tracking-[0.003em] rounded-[100px] capitalize cursor-pointer;
+    @apply bg-white text-orange py-[17px] 2xs:py-2.5 md:py-[17px] hover:bg-orange hover:text-white transition-all duration-500 ease-in-out px-5 2xs:px-[15px] md:px-5 font-bold font-heading tracking-[0.004em] leading-5 rounded-[100px] capitalize cursor-pointer;
   }
 }
 
@@ -110,19 +115,19 @@
     @apply hover:text-orange transition-all duration-500 ease-in-out underline;
   }
   #mobileMenu .mobile-links li {
-    @apply mx-10 font-semibold;
+    @apply px-5 font-semibold;
   }
   .mobile-links .service-items {
-    @apply px-4 py-2 text-gray hover:bg-gray-100 mx-0!;
+    @apply px-4 py-1 text-black hover:bg-gray-100 mx-0!;
   }
   .about-us .about-us-main {
     @apply 2xs:gap-5 md:gap-7 2xl:gap-[70px] 2xs:px-5 xl:px-14 2xl:px-[120px] pt-[100px] 2xs:pt-10 2xl:pt-[100px] pb-[104px] 2xs:pb-10 2xl:pb-[104px];
   }
   .about-us .about-us-feature {
-    @apply flex items-center 2xs:leading-5 2xl:leading-8;
+    @apply flex items-center gap-1 2xs:leading-5 2xl:leading-8;
   }
   .our-history .year-span {
-    @apply tracking-[0.05em] text-[36px] leading-[51px] 2xs:text-[18px] sm:text-[25px] xl:text-[36px];
+    @apply tracking-[0.05em] text-[36px] leading-[51px] 2xs:text-[18px] sm:text-[25px] xl:text-[36px] cursor-pointer;
   }
   .capabilities .capability-main {
     @apply flex gap-3 items-center mx-[71px];
@@ -144,7 +149,7 @@
     @apply text-gray font-roboto;
   }
   .our-team .our-team-main {
-    @apply pl-[121px] pr-[117px] mt-[74px] 2xs:my-11 lg:my-12 xl:my-13 2xl:mt-[74px] 2xl:mb-[130px] 2xs:px-5 lg:px-5 xl:px-11 2xl:pl-[121px] 2xl:pr-[117px];
+    @apply mt-[74px] 2xs:my-11 lg:my-12 xl:my-13 2xl:mt-[74px] 2xl:mb-[130px] xl:px-5 2xl:pl-[121px] 2xl:pr-[117px];
   }
   .our-team .team-container {
     @apply relative bg-dark-gray rounded-[20px];
@@ -153,7 +158,7 @@
     @apply w-full h-full object-cover rounded-[30px];
   }
   .our-team .team-contant {
-    @apply absolute bottom-0 bg-blue w-full rounded-b-[20px] py-[15px] px-5;
+    @apply absolute bottom-0 bg-blue w-full rounded-b-[20px] py-[15px] px-5 2xs:px-3 2xl:px-5;
   }
   .container1 :first-child,
   .container2 :first-child {
@@ -196,7 +201,7 @@
     @apply absolute bottom-0 flex items-end bg-[#D82626CC]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
   }
   .our-history .history-text {
-    @apply p-[50px] 2xs:p-2 md:py-5 lg:p-7 xl:p-9 2xl:p-[50px] rounded-3xl bg-white 2xs:ml-0 lg:-ml-[85px] 2xl:-ml-[278px] 2xs:mt-0 lg:mt-5 xl:mt-10 2xl:mt-[50px] 2xs:mb-0 lg:mb-5 xl:mb-10 2xl:mb-[51px] h-fit self-center;
+    @apply p-[50px] 2xs:p-4 md:py-5 lg:p-7 xl:p-9 2xl:p-[50px] rounded-3xl bg-white 2xs:ml-0 lg:-ml-[85px] 2xl:-ml-[278px] 2xs:mt-0 lg:mt-5 xl:mt-10 2xl:mt-[50px] 2xs:mb-0 lg:mb-5 xl:mb-10 2xl:mb-[51px] h-fit self-center;
   }
   .our-history .history-text p {
     @apply mt-[15px] text-black lg:max-w-[569px] text-base 2xs:leading-[22px] sm:leading-[26px];
@@ -231,15 +236,6 @@
     #0055a4 141.65%
   );
 }
-.nav-shadow {
-  box-shadow: 0px 4px 18.6px 0px #0000001a;
-}
-.menu-shedow {
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-}
-.our-history-shedow {
-  box-shadow: 4.95px 4.95px 4.95px 0px #0000001a;
-}
 .our-commitment-gradiant {
   background: linear-gradient(
     180deg,
@@ -247,9 +243,6 @@
     #0055a4 52.4%,
     rgba(0, 85, 164, 0) 100%
   );
-}
-.our-commitment-shedow {
-  box-shadow: 0px 10px 30px 0px #00000008;
 }
 .our-team-gradiant {
   background: linear-gradient(
@@ -292,7 +285,6 @@
   width: 100%;
   height: 100%;
 }
-
 .swiper-pagination-bullet {
   width: 16px !important;
   height: 16px !important;
@@ -301,7 +293,6 @@
   border-radius: 50%;
   margin-inline: 12px !important;
 }
-
 .swiper-pagination-bullet-active {
   background-color: #e60000 !important;
 }
