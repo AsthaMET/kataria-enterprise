@@ -160,11 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   var swiper = new Swiper(".our-commitment-slider", {
     loop: true,
-    // autoplay: {
-    //   delay: 2100,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: "auto",
+    autoplay: {
+      delay: 2100,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       320: {
         slidesPerView: 1.5,
@@ -180,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       1024: {
         slidesPerView: 3,
+        spaceBetween: 30,
       },
     },
   });

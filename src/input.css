@@ -146,7 +146,7 @@
     @apply text-gray font-roboto;
   }
   .our-commitment .core-value-text {
-    @apply text-gray font-roboto;
+    @apply text-gray font-roboto 2xs:leading-5 2xl:leading-7;
   }
   .our-team .our-team-main {
     @apply mt-[74px] 2xs:my-11 lg:my-12 xl:my-13 2xl:mt-[74px] 2xl:mb-[130px] xl:px-5 2xl:pl-[121px] 2xl:pr-[117px];
@@ -206,13 +206,18 @@
   .our-history .history-text p {
     @apply mt-[15px] text-black lg:max-w-[569px] text-base 2xs:leading-[22px] sm:leading-[26px];
   }
+  .bg-gradiant {
+    @apply before:absolute before:inset-0 before:-z-10 before:content-[''] 
+            before:bg-[linear-gradient(180deg,#d82626_0%,#0055a4_52.4%,rgba(0,85,164,0)_100%)];
+  }
 }
+
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translate3d(0%, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -260,8 +265,8 @@
   width: 100%;
 }
 .slider .slide-track {
-  width: 100%;
-  animation: scroll 20s linear infinite;
+  width: 3686px;
+  animation: scroll 10s linear infinite;
 }
 .slide-track .slide {
   width: 100%;
@@ -286,12 +291,12 @@
   height: 100%;
 }
 .swiper-pagination-bullet {
-  width: 16px !important;
-  height: 16px !important;
+  width: clamp(12px, 2vw, 16px) !important;
+  height: clamp(12px, 2vw, 16px) !important;
   background: white !important;
   border: 1.5px solid #e60000;
   border-radius: 50%;
-  margin-inline: 12px !important;
+  margin-inline: clamp(8px, 1.5vw, 12px) !important;
 }
 .swiper-pagination-bullet-active {
   background-color: #e60000 !important;
