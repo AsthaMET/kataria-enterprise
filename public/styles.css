@@ -1655,6 +1655,11 @@
       margin-top: 50px;
     }
   }
+  .xl\:mt-\[60px\] {
+    @media (width >= 80rem) {
+      margin-top: 60px;
+    }
+  }
   .xl\:mt-\[118px\] {
     @media (width >= 80rem) {
       margin-top: 118px;
@@ -2746,7 +2751,7 @@
 }
 .slider .slide-track {
   width: 3686px;
-  animation: scroll 10s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 .slide-track .slide {
   width: 100%;
