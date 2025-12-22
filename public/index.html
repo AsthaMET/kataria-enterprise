@@ -42,7 +42,7 @@
 
   <header>
     <nav class="w-full shadow-nav-shadow lg:rounded-b-[30px]">
-      <div class="relative container-max-1680 flex py-[25.5px] 2xs:py-4 md:py-5 xl:py-[25.5px]">
+      <div class="relative container-max-1681 flex py-[25.5px] 2xs:py-4 md:py-5 xl:py-[25.5px]">
         <a href="index.html"><img src="./assets/images/logo.png" alt="logo"></a>
         <div
           class="nav-links flex lg:gap-3 2xl:gap-[37px] text-[18px] 2xs:text-base xl:text-[18px] 2xs:hidden lg:flex items-center">
@@ -68,6 +68,7 @@
           </div>
           <!--  -->
           <div class="select-dropdown group relative inline-block z-50">
+            <input type="checkbox" id="dropdown-toggle" class="hidden peer" />
             <div
               class="rounded group cursor-pointer flex items-center gap-[7px] py-5 font-medium tracking-[0.006em] hover:text-blue hover:font-bold leading-[23px] transition-all duration-500 ease-in-out">
               Brands
@@ -119,7 +120,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu"
-      class="fixed overflow-y-scroll shadow-menu-shedow top-[43px] mt-[90px] max-[768px]:mt-[79px] max-[320px]:mt-[79.45px] left-0 w-full 2xs:h-[-webkit-fill-available] sm:h-screen sm:w-[60%] -translate-x-full transition-transform duration-500 z-40 bg-white">
+      class="fixed overflow-y-scroll shadow-menu-shedow top-[42px] mt-[90px] max-[768px]:mt-[79px] max-[320px]:mt-[79.45px] left-0 w-full 2xs:h-[-webkit-fill-available] sm:h-screen sm:w-[60%] -translate-x-full transition-transform duration-500 z-40 bg-white">
       <ul class="mobile-links flex flex-col gap-4 text-[20px] py-10">
         <li class="text-black"><a href="#">Home</a></li>
         <li class="text-black"><a href="#">About Us</a></li>
@@ -129,17 +130,18 @@
             <label for="toggle-service"
               class="text-black group hover:text-blue hover:font-semibold justify-between cursor-pointer flex items-center gap-[7px]">
               Services
-              <svg width="15" height="15" viewBox="0 0 10 9" class="group-active:rotate-180" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
-                  fill="black" />
-              </svg>
             </label>
-            <ul class="relative z-50 cursor-pointer w-full top-full mt-2 left-0 bg-white hidden peer-checked:block">
-              <li class="service-items border-y border-black"><a href="#">Item 1</a></li>
-              <li class="service-items border-b border-black"><a href="#">Item 2</a></li>
-              <li class="service-items border-b border-black"><a href="#">Item 3</a></li>
+            <svg width="15" height="15" viewBox="0 0 10 9"
+              class="z-50 transform transition-transform duration-300 peer-checked:rotate-180 absolute right-0 top-3 pointer-events-none"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
+                fill="black" />
+            </svg>
+            <ul class="relative z-40 cursor-pointer w-full top-full mt-2 left-0 bg-white hidden peer-checked:block">
+              <li class="service-items border-y border-gray"><a href="#">Item 1</a></li>
+              <li class="service-items border-b border-gray"><a href="#">Item 2</a></li>
+              <li class="service-items border-b border-gray"><a href="#">Item 3</a></li>
             </ul>
           </div>
         </li>
@@ -149,21 +151,21 @@
             <label for="toggle"
               class="text-black group hover:text-blue hover:font-semibold justify-between cursor-pointer flex items-center gap-[7px]">
               Brands
-              <svg width="15" height="15" viewBox="0 0 10 9" class="group-active:rotate-180" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
-                  fill="black" />
-              </svg>
             </label>
-            <ul class="relative z-50 cursor-pointer w-full top-full mt-2 left-0 bg-white hidden peer-checked:block">
-              <li class="service-items border-y border-black"><a href="#">Item 1</a></li>
-              <li class="service-items border-b border-black"><a href="#">Item 2</a></li>
-              <li class="service-items border-b border-black"><a href="#">Item 3</a></li>
+            <svg width="15" height="15" viewBox="0 0 10 9"
+              class="z-50 transform transition-transform duration-300 peer-checked:rotate-180 absolute right-0 top-3 pointer-events-none"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.74599 4.059L5.01999 7.776C4.95999 7.842 4.88499 7.875 4.79499 7.875C4.70499 7.875 4.62999 7.842 4.56999 7.776L0.843995 4.059C0.777995 3.993 0.744995 3.915 0.744995 3.825C0.744995 3.735 0.777995 3.66 0.843995 3.6L1.681 2.772C1.741 2.706 1.816 2.673 1.906 2.673C1.996 2.673 2.071 2.706 2.131 2.772L4.79499 5.436L7.45899 2.772C7.52499 2.706 7.59999 2.673 7.68399 2.673C7.76799 2.673 7.84599 2.706 7.91799 2.772L8.74599 3.6C8.81199 3.666 8.84499 3.741 8.84499 3.825C8.84499 3.909 8.81199 3.987 8.74599 4.059Z"
+                fill="black" />
+            </svg>
+            <ul class="relative z-40 cursor-pointer w-full top-full mt-2 left-0 bg-white hidden peer-checked:block">
+              <li class="service-items border-y border-gray"><a href="#">Item 1</a></li>
+              <li class="service-items border-b border-gray"><a href="#">Item 2</a></li>
+              <li class="service-items border-b border-gray"><a href="#">Item 3</a></li>
             </ul>
           </div>
         </li>
-
         <li><a href="#">Contact</a></li>
 
         <div class="w-full px-8">
@@ -393,7 +395,7 @@
 
   <section class="about-us">
     <div>
-      <div class="flex gap-[70px] about-us-main 2xs:flex-col lg:flex-row">
+      <div class="flex gap-[70px] container-max-1680 about-us-main 2xs:flex-col lg:flex-row">
         <div class="xl:w-[51.18%]"><img src="./assets/images/about-us.png" alt="aboutus"
             class="h-full object-cover 2xs:w-full lg:w-auto rounded-[50px]">
         </div>
@@ -472,7 +474,7 @@
   </section>
 
   <section class="our-history">
-    <div class="py-[104px] px-[120px] 2xs:py-7 md:py-12 xl:py-14 2xl:py-[104px] 2xs:px-5 xl:px-14 2xl:px-[120px]">
+    <div class="py-[104px] px-[120px] 2xs:py-7 md:py-12 xl:py-14 2xl:py-[104px] container-max-1680">
       <div class="relative w-full">
         <div class="flex items-center gap-1.5">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -484,18 +486,18 @@
         </div>
         <h2 class="mt-3">The Story Behind Our Growth</h2>
         <div
-          class="relative w-full flex items-center border-t-2 border-red-700 mt-[50px] 2xs:mt-5 md:mt-7 lg:mt-10 xl:mt-[50px]">
-          <div id="timelineDot" class="absolute -top-2 2xs:left-0 md:left-12 w-[13px] h-[13px] bg-red-700 rounded-full">
+          class="relative w-full flex items-center border-t-2 border-orange mt-[50px] 2xs:mt-5 md:mt-7 lg:mt-10 xl:mt-[50px]">
+          <div id="timelineDot" class="absolute -top-2 2xs:left-0 md:left-12 w-[13px] h-[13px] bg-orange rounded-full">
           </div>
           <div id="timelineYears"
             class="flex relative top-1 left-20 2xs:left-0 md:left-4 lg:left-5 xl:left-7 2xl:left-20 font-body font-normal uppercase 2xs:gap-3 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-[140px]">
             <span
-              class="tracking-[0.05em] text-red-600 hover:text-red-600 text-3xl leading-[51px] text-[40px] 2xs:text-[20px] sm:text-[30px] xl:text-[40px] year cursor-pointer"
+              class="tracking-[0.05em] text-orange hover:text-orange text-3xl leading-[51px] text-[40px] 2xs:text-[20px] sm:text-[30px] xl:text-[40px] year cursor-pointer"
               data-target="y1989">1989</span>
-            <span class="year year-span text-gray hover:text-red-600" data-target="y2002">2002</span>
-            <span class="year year-span text-gray hover:text-red-600" data-target="y2010">2010</span>
-            <span class="year year-span text-gray hover:text-red-600" data-target="y2016">2016</span>
-            <span class="year year-span text-gray hover:text-red-600" data-target="y2024">2024</span>
+            <span class="year year-span text-gray hover:text-orange" data-target="y2002">2002</span>
+            <span class="year year-span text-gray hover:text-orange" data-target="y2010">2010</span>
+            <span class="year year-span text-gray hover:text-orange" data-target="y2016">2016</span>
+            <span class="year year-span text-gray hover:text-orange" data-target="y2024">2024</span>
           </div>
         </div>
       </div>
@@ -675,7 +677,7 @@
       <div class="swiper our-commitment-slider">
         <div class="swiper-wrapper">
           <!-- 1 -->
-          <div class="swiper-slide lg:w-[calc(31.41% - 30px)]">
+          <div class="swiper-slide lg:w-[calc(31.41%-30px)]!">
             <div
               class="bg-white 2xs:py-4 xl:py-[29.5px] px-[18.5px] 2xs:px-4 rounded-[40px] shadow-our-commitment-shedow 2xs:w-full">
               <div class="justify-items-center text-center">
@@ -706,7 +708,7 @@
             </div>
           </div>
           <!-- 2 -->
-          <div class="swiper-slide lg:w-[calc(31.41% - 30px)]">
+          <div class="swiper-slide lg:w-[calc(31.41%-30px)]!">
             <div
               class="bg-white 2xs:py-4 xl:py-[29.5px] 2xs:px-4 xl:px-[18px] rounded-[40px] shadow-our-commitment-shedow 2xs:w-full">
               <div class="justify-items-center text-center">
@@ -750,7 +752,7 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="swiper-slide lg:w-[calc(33.10% - 30px)]">
+          <div class="swiper-slide lg:w-[calc(33.10%-30px)]!">
             <div
               class="bg-white 2xs:py-4 xl:py-[34.5px] xl:px-[21px] 2xs:px-4 rounded-[40px] shadow-our-commitment-shedow 2xs:w-full">
               <div class="justify-items-center text-center">
@@ -839,7 +841,7 @@
               </div>
             </div>
           </div>
-
+          
         </div>
       </div>
 
@@ -1190,7 +1192,7 @@
                 Their
                 timely deliveries and nationwide
                 reach ensure our products are always available and fresh</p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:mt-[35px]">
                 <h6>Paras V. Kataria</h6>
                 <p>Director, Balaji Wafers</p>
               </div>
@@ -1213,7 +1215,7 @@
                 temperature-controlled
                 logistics maintain the perfect quality of our ice creams across all regions. The team’s coordination.
               </p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Rupesh Vadariya</h6>
                 <p>Operations Head, Vadilal Ice Cream</p>
               </div>
@@ -1235,7 +1237,7 @@
               <p class="text leading-[26.2px]">Kataria Enterprise has been instrumental in driving our regional
                 distribution success.
                 Their streamlined logistics operations, advanced tracking systems, and well-managed network </p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Rimal V. Kataria</h6>
                 <p>Supply Chain Director</p>
               </div>
@@ -1259,7 +1261,7 @@
                 Their
                 timely deliveries and nationwide
                 reach ensure our products are always available and fresh</p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Paras V. Kataria</h6>
                 <p>Director, Balaji Wafers</p>
               </div>
@@ -1282,7 +1284,7 @@
                 temperature-controlled
                 logistics maintain the perfect quality of our ice creams across all regions. The team’s coordination.
               </p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Rupesh Vadariya</h6>
                 <p>Operations Head, Vadilal Ice Cream</p>
               </div>
@@ -1304,7 +1306,7 @@
               <p class="text leading-[26.2px]">Kataria Enterprise has been instrumental in driving our regional
                 distribution success.
                 Their streamlined logistics operations, advanced tracking systems, and well-managed network </p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Rimal V. Kataria</h6>
                 <p>Supply Chain Director</p>
               </div>
@@ -1328,7 +1330,7 @@
                 Their
                 timely deliveries and nationwide
                 reach ensure our products are always available and fresh</p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Paras V. Kataria</h6>
                 <p>Director, Balaji Wafers</p>
               </div>
@@ -1351,7 +1353,7 @@
                 temperature-controlled
                 logistics maintain the perfect quality of our ice creams across all regions. The team’s coordination.
               </p>
-              <div class="author-name mt-[35px]">
+              <div class="author-name 2xs:mt-3 md:-[35px]">
                 <h6>Rupesh Vadariya</h6>
                 <p>Operations Head, Vadilal Ice Cream</p>
               </div>
@@ -1370,7 +1372,7 @@
     <div
       class="pl-[263px] pr-[262px] bg-black mt-[100px] 2xs:mt-7 md:mt-9 lg:mt-12 xl:mt-15 2xl:mt-[100px] 2xs:px-5 min-[1024px]:px-7 min-[1281px]:px-10 min-[1521px]:px-14 min-[1780px]:pr-[262px] min-[1780px]:pl-[263px] min-[1600px]:pr-17">
       <div
-        class="flex gap-4 md:gap-0 2xs:flex-col md:flex-row justify-between items-center border-b-[0.5px] border-gray pb-[50px] pt-20 2xs:py-7">
+        class="flex gap-4 md:gap-0 2xs:flex-col md:flex-row justify-between items-center border-b-[0.5px] border-gray pb-[50px] pt-20 2xs:py-6 md:py-8 lg:py-10 xl:pt-20 xl:pb-[50px]">
         <div>
           <h2 class="text-white">Ready To Partner With Us?</h2>
           <p class="font-poppins leading-[30px] text-white max-w-[660px] capitalize mt-4 w-full">Join hands with Kataria
@@ -1399,7 +1401,7 @@
       <div class="flex 2xs:gap-6 xl:gap-[100px] 2xl:justify-between 2xs:flex-col lg:flex-row">
         <div class="w-full">
           <div>
-            <a href="#"><img src="./assets/images/footer-logo.svg" alt="logo" class="max-w-[295px] 2xs:w-full"></a>
+            <a href="#"><img src="./assets/images/footer-logo.svg" alt="logo" class="max-w-[295px]"></a>
           </div>
           <p class="text-white xl:max-w-[320px] text-base leading-[26px] font-body mt-[30px] 2xs:w-full">Delivering
             excellence in

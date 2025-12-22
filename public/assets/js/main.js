@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.scrollY > 0) {
       mobileMenu.style.top = "0";
     } else {
-      mobileMenu.style.top = "43px";
+      mobileMenu.style.top = "42px";
     }
   }
   function openMenu() {
@@ -74,18 +74,26 @@ document.addEventListener("DOMContentLoaded", () => {
       320: {
         slidesPerView: 1.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       768: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       1024: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       1280: {
         slidesPerView: 4,
         spaceBetween: 30,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
     },
   });
@@ -130,27 +138,36 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 2100,
       disableOnInteraction: false,
     },
-    spaceBetween: 20,
     breakpoints: {
       320: {
         slidesPerView: 1.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       640: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       768: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       1024: {
         slidesPerView: 3.5,
         spaceBetween: 20,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       1280: {
         slidesPerView: 4,
         spaceBetween: 30,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
     },
   });
@@ -168,18 +185,26 @@ document.addEventListener("DOMContentLoaded", () => {
       320: {
         slidesPerView: 1.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       640: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       768: {
         slidesPerView: 2.5,
         spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
       },
       1024: {
         slidesPerView: 3,
         spaceBetween: 30,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
       },
     },
   });
@@ -201,10 +226,10 @@ function moveDotToYear(year) {
 function activateYear(year) {
   const target = year.dataset.target;
   years.forEach((y) => {
-    y.classList.remove("text-red-600");
-    y.classList.add("text-gray-500");
+    y.classList.remove("text-orange");
+    y.classList.add("text-gray");
   });
-  year.classList.add("text-red-600");
+  year.classList.add("text-orange");
   contents.forEach((c) => c.classList.add("hidden"));
   document
     .querySelector(`[data-content="${target}"]`)
@@ -218,6 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
   activateYear(years[0]);
 });
 window.addEventListener("resize", () => {
-  const activeYear = document.querySelector(".year.text-red-600");
+  const activeYear = document.querySelector(".year.text-orange");
   if (activeYear) moveDotToYear(activeYear);
 });
